@@ -26,8 +26,12 @@ public class DataService
         if (entry == null)
         {
             entry = new Entry("Lønseddel", "Her min lønseddel fra Januar 2025", DateTime.Now, "Karl24", 29);
-            db.Entries.Add(entry);
+            var entry2 = new Entry("Ferierejse", "Se billeder fra min tur til Spanien", DateTime.Now.AddDays(-2), "TravelLover", 45);
+            var entry3 = new Entry("Madopskrift", "Den bedste lasagne opskrift nogensinde", DateTime.Now.AddDays(-5), "ChefMaster", 122);
             
+            db.Entries.Add(entry);
+            db.Entries.Add(entry2);
+            db.Entries.Add(entry3);
         }
 
         Book book = db.Books.FirstOrDefault()!;
