@@ -1,0 +1,18 @@
+# Build results
+bin/
+obj/
+# User-specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# Logs
+*.log
+logs/
+# Security
+appsettings*.json
+secrets.json
+# OS-specific files
+Thumbs.db
+.DS_Store
