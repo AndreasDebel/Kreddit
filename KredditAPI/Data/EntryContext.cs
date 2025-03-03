@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Model;
 
-namespace Model
+namespace KredditAPI.Data
 {
     public class EntryContext : DbContext
     {
