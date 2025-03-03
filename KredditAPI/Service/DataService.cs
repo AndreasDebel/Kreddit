@@ -25,12 +25,9 @@ public class DataService
         Entry entry = db.Entries.FirstOrDefault()!;
         if (entry == null)
         {
-            entry = new Entry { Titel = "Lønseddel", Author = "Karl24", Date = DateTime.Now, Votes = 29, Text = "Her min lønseddel fra Januar 2025" };
+            entry = new Entry("Lønseddel", "Her min lønseddel fra Januar 2025", DateTime.Now, "Karl24", 29);
 
-            //entry = Entry("Lønseddel", "Her min lønseddel fra Januar 2025", DateTime.Now, "Karl24", 29);
             db.Entries.Add(entry);
-            //db.Entries.Add(new Entry { Titel = "" });
-            //db.Entries.Add(new Entry { Fullname = "Mette" });
         }
 
         Book book = db.Books.FirstOrDefault()!;
