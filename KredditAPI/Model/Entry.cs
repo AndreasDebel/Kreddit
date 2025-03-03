@@ -16,6 +16,7 @@ namespace Model
             this.Date = date;
             this.Author = author;
             this.Votes = votes;
+            this.CommentList = new List<Comment>();
         }
         public long EntryId { get; set; }
 
@@ -28,6 +29,8 @@ namespace Model
         public string? Author { get; set; }
 
         public int Votes { get; set; }
+
+        public List<Comment> CommentList  { get; set; }
 
 
     
