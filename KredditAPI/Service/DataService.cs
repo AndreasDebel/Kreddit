@@ -26,8 +26,8 @@ public class DataService
         if (entry == null)
         {
             entry = new Entry("Lønseddel", "Her min lønseddel fra Januar 2025", DateTime.Now, "Karl24", 29);
-
             db.Entries.Add(entry);
+            
         }
 
         Book book = db.Books.FirstOrDefault()!;
