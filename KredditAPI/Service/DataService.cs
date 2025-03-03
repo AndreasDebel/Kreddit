@@ -34,43 +34,36 @@ public class DataService
             db.Entries.Add(entry3);
         }
 
-        Book book = db.Books.FirstOrDefault()!;
-        if (book == null)
-        {
-            db.Books.Add(new Book { Title = "Harry Potter", Author = entry });
-            db.Books.Add(new Book { Title = "Ringenes Herre", Author = entry });
-            db.Books.Add(new Book { Title = "Entity Framework for Dummies", Author = entry });
-        }
 
         db.SaveChanges();
     }
 
-    public List<Book> GetBooks()
-    {
-        return db.Books.Include(b => b.Author).ToList();
-    }
+    //public List<Book> GetBooks()
+    //{
+    //    return db.Books.Include(b => b.Author).ToList();
+    //}
 
-    public Book GetBook(int id)
-    {
-        return db.Books.Include(b => b.Author).FirstOrDefault(b => b.BookId == id);
-    }
+    //public Book GetBook(int id)
+    //{
+    //    return db.Books.Include(b => b.Author).FirstOrDefault(b => b.BookId == id);
+    //}
 
-    public List<Author> GetAuthors()
-    {
-        return db.Authors.ToList();
-    }
+    //public List<Author> GetAuthors()
+    //{
+    //    return db.Authors.ToList();
+    //}
 
-    public Author GetAuthor(int id)
-    {
-        return db.Authors.Include(a => a.Books).FirstOrDefault(a => a.AuthorId == id);
-    }
+    //public Author GetAuthor(int id)
+    //{
+    //    return db.Authors.Include(a => a.Books).FirstOrDefault(a => a.AuthorId == id);
+    //}
 
-    public string CreateBook(string title, int authorId)
-    {
-        Author author = db.Authors.FirstOrDefault(a => a.AuthorId == authorId);
-        db.Books.Add(new Book { Title = title, Author = author });
-        db.SaveChanges();
-        return "Book created";
-    }
+    //public string CreateBook(string title, int authorId)
+    //{
+    //    Author author = db.Authors.FirstOrDefault(a => a.AuthorId == authorId);
+    //    db.Books.Add(new Book { Title = title, Author = author });
+    //    db.SaveChanges();
+    //    return "Book created";
+    //}
 
 }
