@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Model;
+using shared.Model;
 
-namespace KredditAPI.Data
+namespace Data
 {
-    public class EntryContext : DbContext
+    public class PostContext : DbContext
     {
-        public DbSet<Entry> Entries { get; set; }
+        public DbSet<Post> Posts { get; set; }
         public string DbPath { get; }
 
-        public EntryContext()
+        public PostContext()
         {
             DbPath = "bin/Kreddit.db";
         }
@@ -20,7 +20,7 @@ namespace KredditAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Entry>().ToTable("Entries");
+            modelBuilder.Entity<Post>().ToTable("Posts");
         }
     }
 }

@@ -2,13 +2,13 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using shared.Model;
 
-namespace KredditAPI.Service;
+namespace Service;
 
 public class DataService
 {
-    private EntryContext db { get; }
+    private PostContext db { get; }
 
-    public DataService(EntryContext db)
+    public DataService(PostContext db)
     {
         this.db = db;
     }
