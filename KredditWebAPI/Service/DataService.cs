@@ -2,10 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 using Data;
-using Model;
+using shared.Model;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.X86;
-using KredditAPI.Data;
 
 namespace KredditAPI.Service;
 
@@ -23,7 +22,7 @@ public class DataService
     public void SeedData()
     {
 
-        Entry entry = db.Entries.FirstOrDefault()!;
+        Post entry = db.Posts.FirstOrDefault()!;
         if (entry == null)
         {
             entry = new Entry("Lønseddel", "Her min lønseddel fra Januar 2025", DateTime.Now, "Karl24", 29);
