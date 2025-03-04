@@ -10,13 +10,18 @@ namespace Data
         public DbSet<Post> Posts { get; set; }
         public string DbPath { get; }
 
-        public PostContext()
+
+        public PostContext(DbContextOptions<PostContext> options) : base(options)
         {
-            DbPath = "bin/Kreddit.db";
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite($"Data Source={DbPath}");
+        //public PostContext()
+        //{
+        //    DbPath = "bin/Kreddit.db";
+        //}
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //    => options.UseSqlite($"Data Source={DbPath}");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
