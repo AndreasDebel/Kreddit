@@ -46,13 +46,17 @@ public class DataService
 
     public List<Post> GetPosts()
     {
-        return db.Posts.Include(b => b.Comments).ToList();
+        return db.Posts.Include(p => p.Comments).ToList();
     }
 
-    //public Book GetBook(int id)
-    //{
-    //    return db.Books.Include(b => b.Author).FirstOrDefault(b => b.BookId == id);
-    //}
+    public Post GetPost(int id)
+    {
+        return db.Posts
+            .Include(p => p.User)
+            .Include(p => p.Comments)
+                .ThenInclude(c => c.User) // include first user for each comment
+            .FirstOrDefault(p => p.Id == id);
+    }
 
     //public List<Author> GetAuthors()
     //{

@@ -67,6 +67,10 @@ app.MapGet("/posts", (DataService service) =>
     return service.GetPosts();
 });
 
+app.MapGet("/posts/{id}", (DataService service, int id) => {
+    return service.GetPost(id);
+});
+
 //app.UseAuthorization();
 
 //app.MapControllers();
