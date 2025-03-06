@@ -44,10 +44,10 @@ public class DataService
         }
     }
 
-    //public List<Book> GetBooks()
-    //{
-    //    return db.Books.Include(b => b.Author).ToList();
-    //}
+    public List<Post> GetPosts()
+    {
+        return db.Posts.Include(b => b.Comments).ToList();
+    }
 
     //public Book GetBook(int id)
     //{

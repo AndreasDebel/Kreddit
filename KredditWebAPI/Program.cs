@@ -61,6 +61,20 @@ app.MapGet("/", (DataService service) =>
     return new { message = "Hello World!" };
 });
 
+app.MapGet("/posts", (DataService service) =>
+{
+    return service.GetBooks().Select(b => new {
+        bookId = b.BookId,
+        title = b.Title,
+        author = new
+        {
+            b.Author.AuthorId,
+            b.Author.Fullname,
+            b.Author.Books
+        }
+    });
+});
+
 //app.UseAuthorization();
 
 //app.MapControllers();
