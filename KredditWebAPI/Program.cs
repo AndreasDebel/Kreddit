@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.Json;
 
 using Data;
 using Service;
+using shared.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,16 +64,7 @@ app.MapGet("/", (DataService service) =>
 
 app.MapGet("/posts", (DataService service) =>
 {
-    return service.GetBooks().Select(b => new {
-        bookId = b.BookId,
-        title = b.Title,
-        author = new
-        {
-            b.Author.AuthorId,
-            b.Author.Fullname,
-            b.Author.Books
-        }
-    });
+    return service.GetPosts();
 });
 
 //app.UseAuthorization();
