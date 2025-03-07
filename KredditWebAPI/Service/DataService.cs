@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Data;
 using shared.Model;
+using Microsoft.Extensions.Hosting;
 
 namespace Service;
 
@@ -51,29 +52,36 @@ public class DataService
 
     public Post GetPost(int id)
     {
-        return db.Posts
+        var post = db.Posts
             .Include(p => p.User)
             .Include(p => p.Comments)
                 .ThenInclude(c => c.User) // include first user for each comment
             .FirstOrDefault(p => p.Id == id);
+
+        return post == null ? throw new KeyNotFoundException($"Post with ID {id} not found") : post;
     }
 
-    //public List<Author> GetAuthors()
-    //{
-    //    return db.Authors.ToList();
-    //}
+    public Comment CreateComment(string? content, int postId, int userId)
+    {
+        // find the post
+        Post? post = db.Posts.Include(p => p.Comments).FirstOrDefault(p => p.Id == postId);
+        if (post == null)
+        {
+            throw new KeyNotFoundException($"Post with ID {postId} not found");
+        }
+        
+        // Create new comment
+        Comment newComment = new Comment(content ?? "", 0, 0, null);
 
-    //public Author GetAuthor(int id)
-    //{
-    //    return db.Authors.Include(a => a.Books).FirstOrDefault(a => a.AuthorId == id);
-    //}
+        // Create a user reference with just the ID
+        newComment.User = new User() { Id = userId };
 
-    //public string CreateBook(string title, int authorId)
-    //{
-    //    Author author = db.Authors.FirstOrDefault(a => a.AuthorId == authorId);
-    //    db.Books.Add(new Book { Title = title, Author = author });
-    //    db.SaveChanges();
-    //    return "Book created";
-    //}
+        // Add comment to post
+        post.Comments.Add(newComment);
+
+        db.SaveChanges();
+
+        return newComment;
+    }
 
 }

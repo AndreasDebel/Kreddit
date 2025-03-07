@@ -71,8 +71,23 @@ app.MapGet("/posts/{id}", (DataService service, int id) => {
     return service.GetPost(id);
 });
 
+app.MapPost("/posts/{postId}/comments", (DataService service, int postId, CommentData data) =>
+{
+    Comment newComment = service.CreateComment(data.Content, postId, data.UserId);
+    return newComment;
+
+});
+
+app.Run();
+
+public class CommentData
+{
+    public string? Content { get; set; }
+    public int UserId { get; set; }
+}
+
 //app.UseAuthorization();
 
 //app.MapControllers();
 
-app.Run();
+
