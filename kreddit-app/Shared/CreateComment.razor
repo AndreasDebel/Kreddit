@@ -1,5 +1,6 @@
 @using kreddit_app.Data;
 @inject ApiService apiService
+@inject NavigationManager NavigationManager
 
 <div>
     <br/>
@@ -23,5 +24,9 @@
         // TODO: Provide list of users from dropdown, or maybe just convert
         // from username to UserId
         await apiService.CreateComment(content, PostId, 2); // UserId: 2
+
+        await Task.Delay(1000);
+        // After comment is added:
+        NavigationManager.NavigateTo($"/post/{PostId}", forceLoad: false);
     }
 }

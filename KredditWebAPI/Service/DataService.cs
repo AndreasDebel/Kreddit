@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using shared.Model;
 using Microsoft.Extensions.Hosting;
-
 namespace Service;
 
 public class DataService
@@ -63,18 +62,36 @@ public class DataService
 
     public Comment CreateComment(string? content, int postId, int userId)
     {
-        // find the post
+        // Find the post
         Post? post = db.Posts.Include(p => p.Comments).FirstOrDefault(p => p.Id == postId);
         if (post == null)
         {
             throw new KeyNotFoundException($"Post with ID {postId} not found");
         }
         
-        // Create new comment
-        Comment newComment = new Comment(content ?? "", 0, 0, null);
+        // Find the existing user
+        // First try locating user in Posts
+        User? user = db.Posts.Where(p => p.User.Id == userId)
+                             .Select(p => p.User)
+                             .FirstOrDefault();
 
-        // Create a user reference with just the ID
-        newComment.User = new User() { Id = userId };
+        // If not found in posts, try to find in comments
+        if (user == null)
+        {
+            user = db.Posts.SelectMany(p => p.Comments)
+                           .Where(c => c.User.Id == userId)
+                           .Select(c => c.User)
+                           .FirstOrDefault();
+        }
+
+        // Else throw exception
+        if (user == null)
+        {
+            throw new KeyNotFoundException($"User with ID {userId} not found");
+        }
+
+        // Create new comment
+        Comment newComment = new Comment(content ?? "", 0, 0, user);
 
         // Add comment to post
         post.Comments.Add(newComment);
@@ -82,6 +99,8 @@ public class DataService
         db.SaveChanges();
 
         return newComment;
+
+
     }
 
 }
