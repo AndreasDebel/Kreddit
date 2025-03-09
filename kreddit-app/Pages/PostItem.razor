@@ -18,7 +18,15 @@ See how the links are made in 'PostList.razor'.
     padding: 10px;
     margin-top: 20px;
     }
+    
+    .back-button {
+        margin-bottom: 10px;
+    }
 </style>
+
+<div class="back-button">
+    <a href="/" class="btn btn-secondary">Back to Home</a>
+</div>
 
 @if (Post == null)
 {
