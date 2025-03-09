@@ -37,6 +37,7 @@ else
     <div class="contents">
         <h4>@Post.Title</h4>
         <p><strong>User: @Post.User.Username, Votes: @(Post.Upvotes - Post.Downvotes)</strong></p>
+        <p><small>Posted on: @Post.CreatedAt.ToString("MMM dd, yyyy HH:mm")</small></p>
         <p>@Post.Content</p>
     </div>
 

@@ -22,17 +22,17 @@ public class DataService
         if (post == null)
         {
             var karl = new User("Karl24");
-            post = new Post(karl, "Lønseddel", "Her min lønseddel fra Januar 2025") { Upvotes = 29 };
+            post = new Post(karl, "Lønseddel", "Her min lønseddel fra Januar 2025") { Upvotes = 29, CreatedAt = DateTime.Now.AddDays(-5) };
             post.Comments.Add(new Comment("Hvor meget fik du udbetalt?", 5, 0, new User("PengeMand")));
             post.Comments.Add(new Comment("Fedt med åbenhed om løn!", 12, 0, new User("LønDebat")));
 
             var traveler = new User("TravelLover");
-            var post2 = new Post(traveler, "Ferierejse", "Se billeder fra min tur til Spanien") { Upvotes = 45 };
+            var post2 = new Post(traveler, "Ferierejse", "Se billeder fra min tur til Spanien") { Upvotes = 45, CreatedAt = DateTime.Now.AddDays(-3) };
             post2.Comments.Add(new Comment("Hvilket hotel boede I på?", 3, 0, new User("Rejsefan")));
             post2.Comments.Add(new Comment("Flotte billeder! Især stranden", 8, 0, new User("PhotoLover")));
 
             var chef = new User("ChefMaster");
-            var post3 = new Post(chef, "Madopskrift", "Den bedste lasagne opskrift nogensinde") { Upvotes = 122 };
+            var post3 = new Post(chef, "Madopskrift", "Den bedste lasagne opskrift nogensinde") { Upvotes = 122, CreatedAt = DateTime.Now.AddDays(-1) };
             post3.Comments.Add(new Comment("Hvilken type ost bruger du?", 15, 0, new User("OstElsker")));
             post3.Comments.Add(new Comment("Tak for opskriften, den prøver jeg i weekenden!", 7, 0, new User("Madglad")));
             
