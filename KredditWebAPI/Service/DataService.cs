@@ -46,7 +46,11 @@ public class DataService
 
     public List<Post> GetPosts()
     {
-        return db.Posts.Include(p => p.Comments).ToList();
+        return db.Posts
+            .Include(p => p.User)
+            .Include(p => p.Comments)
+                .ThenInclude(c => c.User)
+            .ToList();
     }
 
     public Post GetPost(int id)

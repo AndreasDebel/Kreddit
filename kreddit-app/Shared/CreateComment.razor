@@ -63,6 +63,12 @@
                     Console.WriteLine($"User: {user.Id} - {user.Username}");
                 }
             }
+            
+            // Set a default selected user if we have users
+            if (users != null && users.Length > 0)
+            {
+                selectedUserId = users[0].Id;
+            }
         }
         catch (Exception ex)
         {
