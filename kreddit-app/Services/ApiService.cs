@@ -73,20 +73,6 @@ public class ApiService
     {
         try
         {
-            // Create some default users if we can't get any from the API
-            var defaultUsers = new List<User>
-            {
-                new User { Id = 1, Username = "Karl24" },
-                new User { Id = 2, Username = "PengeMand" },
-                new User { Id = 3, Username = "LønDebat" },
-                new User { Id = 4, Username = "TravelLover" },
-                new User { Id = 5, Username = "Rejsefan" },
-                new User { Id = 6, Username = "PhotoLover" },
-                new User { Id = 7, Username = "ChefMaster" },
-                new User { Id = 8, Username = "OstElsker" },
-                new User { Id = 9, Username = "Madglad" }
-            };
-            
             // Try to get posts with users from API
             string url = $"{baseAPI}posts/";
             var posts = await http.GetFromJsonAsync<Post[]>(url);
@@ -119,26 +105,21 @@ public class ApiService
                     }
                 }
                 
-                // If we found users, return them
-                if (uniqueUsers.Count > 0)
-                {
-                    return uniqueUsers.Values.ToArray();
-                }
+                // Return the users we found
+                Console.WriteLine($"Found {uniqueUsers.Count} users from database");
+                return uniqueUsers.Values.ToArray();
             }
             
-            // If we couldn't get users from API, return default users
-            Console.WriteLine("Using default users as fallback");
-            return defaultUsers.ToArray();
+            // If we couldn't get any users, return an empty array
+            Console.WriteLine("No users found in database");
+            return Array.Empty<User>();
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error in GetUsers: {ex.Message}");
-            // Return some default users as fallback
-            return new User[]
-            {
-                new User { Id = 1, Username = "DefaultUser1" },
-                new User { Id = 2, Username = "DefaultUser2" }
-            };
+            Console.WriteLine($"Stack trace: {ex.StackTrace}");
+            // Return an empty array in case of error
+            return Array.Empty<User>();
         }
     }
 }
