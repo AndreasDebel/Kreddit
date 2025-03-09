@@ -54,7 +54,9 @@ else
     </div>
 
 
-    <CreateComment PostId=@PostId OnCommentCreated="RefreshPost"></CreateComment>
+    <div class="contents">
+        <CreateComment PostId=@PostId OnCommentCreated="RefreshPost"></CreateComment>
+    </div>
 }
 
 @code {
