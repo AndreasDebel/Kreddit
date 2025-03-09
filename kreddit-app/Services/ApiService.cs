@@ -85,33 +85,63 @@ public class ApiService
                 // Add post authors
                 foreach (var post in posts)
                 {
-                    if (post.User != null && post.User.Id > 0 && !uniqueUsers.ContainsKey(post.User.Id))
+                    // Debug output for each post
+                    Console.WriteLine($"Processing post ID: {post.Id}, Title: {post.Title}");
+                    
+                    if (post.User != null)
                     {
-                        uniqueUsers[post.User.Id] = post.User;
-                        Console.WriteLine($"Found user in post: {post.User.Id} - {post.User.Username}");
+                        Console.WriteLine($"Post author: ID={post.User.Id}, Username={post.User.Username}");
+                        
+                        if (post.User.Id > 0 && !uniqueUsers.ContainsKey(post.User.Id))
+                        {
+                            uniqueUsers[post.User.Id] = post.User;
+                            Console.WriteLine($"Added user from post: {post.User.Id} - {post.User.Username}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Post {post.Id} has no user!");
                     }
                     
                     // Add comment authors
                     if (post.Comments != null)
                     {
+                        Console.WriteLine($"Post {post.Id} has {post.Comments.Count} comments");
                         foreach (var comment in post.Comments)
                         {
-                            if (comment.User != null && comment.User.Id > 0 && !uniqueUsers.ContainsKey(comment.User.Id))
+                            if (comment.User != null)
                             {
-                                uniqueUsers[comment.User.Id] = comment.User;
-                                Console.WriteLine($"Found user in comment: {comment.User.Id} - {comment.User.Username}");
+                                Console.WriteLine($"Comment author: ID={comment.User.Id}, Username={comment.User.Username}");
+                                
+                                if (comment.User.Id > 0 && !uniqueUsers.ContainsKey(comment.User.Id))
+                                {
+                                    uniqueUsers[comment.User.Id] = comment.User;
+                                    Console.WriteLine($"Added user from comment: {comment.User.Id} - {comment.User.Username}");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Comment {comment.Id} has no user!");
                             }
                         }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Post {post.Id} has no comments collection!");
                     }
                 }
                 
                 // Return the users we found
                 Console.WriteLine($"Found {uniqueUsers.Count} users from database");
+                foreach (var user in uniqueUsers.Values)
+                {
+                    Console.WriteLine($"Final user list: {user.Id} - {user.Username}");
+                }
                 return uniqueUsers.Values.ToArray();
             }
             
             // If we couldn't get any users, return an empty array
-            Console.WriteLine("No users found in database");
+            Console.WriteLine("No posts found in database");
             return Array.Empty<User>();
         }
         catch (Exception ex)
