@@ -68,7 +68,6 @@ else
         try
         {
             Post = await apiService.GetPost(PostId);
-            Console.WriteLine($"Loaded post with {Post?.Comments?.Count ?? 0} comments");
         }
         catch (Exception ex)
         {

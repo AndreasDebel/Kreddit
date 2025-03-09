@@ -58,16 +58,6 @@
             // Load users when component initializes
             users = await apiService.GetUsers();
             
-            // Debug output
-            Console.WriteLine($"Loaded {users?.Length ?? 0} users for dropdown");
-            if (users != null)
-            {
-                foreach (var user in users)
-                {
-                    Console.WriteLine($"User: {user.Id} - {user.Username}");
-                }
-            }
-            
             // Set a default selected user if we have users
             if (users != null && users.Length > 0)
             {

@@ -73,82 +73,54 @@ public class ApiService
     {
         try
         {
-            // Try to get posts with users from API
+            // Get all posts with their users and comments
             string url = $"{baseAPI}posts/";
             var posts = await http.GetFromJsonAsync<Post[]>(url);
             
-            if (posts != null && posts.Length > 0)
+            if (posts == null || posts.Length == 0)
             {
-                // Create a dictionary to store unique users by ID
-                Dictionary<int, User> uniqueUsers = new Dictionary<int, User>();
-                
-                // Add post authors
-                foreach (var post in posts)
-                {
-                    // Debug output for each post
-                    Console.WriteLine($"Processing post ID: {post.Id}, Title: {post.Title}");
-                    
-                    if (post.User != null)
-                    {
-                        Console.WriteLine($"Post author: ID={post.User.Id}, Username={post.User.Username}");
-                        
-                        if (post.User.Id > 0 && !uniqueUsers.ContainsKey(post.User.Id))
-                        {
-                            uniqueUsers[post.User.Id] = post.User;
-                            Console.WriteLine($"Added user from post: {post.User.Id} - {post.User.Username}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Post {post.Id} has no user!");
-                    }
-                    
-                    // Add comment authors
-                    if (post.Comments != null)
-                    {
-                        Console.WriteLine($"Post {post.Id} has {post.Comments.Count} comments");
-                        foreach (var comment in post.Comments)
-                        {
-                            if (comment.User != null)
-                            {
-                                Console.WriteLine($"Comment author: ID={comment.User.Id}, Username={comment.User.Username}");
-                                
-                                if (comment.User.Id > 0 && !uniqueUsers.ContainsKey(comment.User.Id))
-                                {
-                                    uniqueUsers[comment.User.Id] = comment.User;
-                                    Console.WriteLine($"Added user from comment: {comment.User.Id} - {comment.User.Username}");
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Comment {comment.Id} has no user!");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Post {post.Id} has no comments collection!");
-                    }
-                }
-                
-                // Return the users we found
-                Console.WriteLine($"Found {uniqueUsers.Count} users from database");
-                foreach (var user in uniqueUsers.Values)
-                {
-                    Console.WriteLine($"Final user list: {user.Id} - {user.Username}");
-                }
-                return uniqueUsers.Values.ToArray();
+                Console.WriteLine("No posts found to extract users from");
+                return Array.Empty<User>();
             }
             
-            // If we couldn't get any users, return an empty array
-            Console.WriteLine("No posts found in database");
-            return Array.Empty<User>();
+            // Create a dictionary to store unique users by ID
+            Dictionary<int, User> uniqueUsers = new Dictionary<int, User>();
+            
+            // Process each post to extract users
+            foreach (var post in posts)
+            {
+                // Add post author if valid
+                if (post.User != null && post.User.Id > 0)
+                {
+                    if (!uniqueUsers.ContainsKey(post.User.Id))
+                    {
+                        uniqueUsers[post.User.Id] = post.User;
+                    }
+                }
+                
+                // Process comments to extract users
+                if (post.Comments != null)
+                {
+                    foreach (var comment in post.Comments)
+                    {
+                        // Add comment author if valid
+                        if (comment.User != null && comment.User.Id > 0)
+                        {
+                            if (!uniqueUsers.ContainsKey(comment.User.Id))
+                            {
+                                uniqueUsers[comment.User.Id] = comment.User;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            Console.WriteLine($"Found {uniqueUsers.Count} unique users");
+            return uniqueUsers.Values.ToArray();
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error in GetUsers: {ex.Message}");
-            Console.WriteLine($"Stack trace: {ex.StackTrace}");
-            // Return an empty array in case of error
             return Array.Empty<User>();
         }
     }
