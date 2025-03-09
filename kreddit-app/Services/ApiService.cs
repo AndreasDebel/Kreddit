@@ -71,41 +71,28 @@ public class ApiService
 
     public async Task<User[]> GetUsers()
     {
-        // Get all posts with their comments and users
-        string url = $"{baseAPI}posts/";
-        var posts = await http.GetFromJsonAsync<Post[]>(url);
+        // Get all posts which include users
+        var posts = await GetPosts();
         
-        if (posts == null)
-            return Array.Empty<User>();
-            
         // Create a dictionary to store unique users by ID
         Dictionary<int, User> uniqueUsers = new Dictionary<int, User>();
         
         // Add post authors
         foreach (var post in posts)
         {
-            if (post.User != null && post.User.Id > 0 && !uniqueUsers.ContainsKey(post.User.Id))
+            if (post.User != null && !uniqueUsers.ContainsKey(post.User.Id))
             {
                 uniqueUsers[post.User.Id] = post.User;
             }
             
             // Add comment authors
-            if (post.Comments != null)
+            foreach (var comment in post.Comments)
             {
-                foreach (var comment in post.Comments)
+                if (comment.User != null && !uniqueUsers.ContainsKey(comment.User.Id))
                 {
-                    if (comment.User != null && comment.User.Id > 0 && !uniqueUsers.ContainsKey(comment.User.Id))
-                    {
-                        uniqueUsers[comment.User.Id] = comment.User;
-                    }
+                    uniqueUsers[comment.User.Id] = comment.User;
                 }
             }
-        }
-        
-        // If no users found, add a default user for testing
-        if (uniqueUsers.Count == 0)
-        {
-            uniqueUsers[1] = new User { Id = 1, Username = "DefaultUser" };
         }
         
         // Return as array
