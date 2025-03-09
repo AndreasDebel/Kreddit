@@ -3,10 +3,7 @@
 @using shared.Model;
 @inject ApiService apiService
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Create a new Post</h3>
+<h3>Create a new Post</h3>
             
             <div class="form-group mb-3">
                 <label for="postTitle">Title</label>
@@ -42,9 +39,6 @@
             <div class="mt-3">
                 <button class="btn btn-primary" id="createPostButton" type="button" @onclick="CreateNewPost">Create Post</button>
                 <a class="btn btn-secondary ms-2" href="/">Cancel</a>
-            </div>
-        </div>
-    </div>
 </div>
 
 @code {
