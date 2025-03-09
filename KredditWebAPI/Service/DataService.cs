@@ -58,7 +58,8 @@ public class DataService
         var post = db.Posts
             .Include(p => p.User)
             .Include(p => p.Comments)
-                .ThenInclude(c => c.User) // include first user for each comment
+                .ThenInclude(c => c.User) // include user for each comment
+            .AsNoTracking() // Use AsNoTracking for better performance in read-only scenarios
             .FirstOrDefault(p => p.Id == id);
 
         return post == null ? throw new KeyNotFoundException($"Post with ID {id} not found") : post;

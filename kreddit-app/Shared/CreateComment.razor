@@ -11,12 +11,16 @@
         <div class="form-group me-2" style="width: 30%;">
             <select id="userSelect" class="form-control" @bind="selectedUserId">
                 <option value="">Comment as...</option>
-                @if (users != null)
+                @if (users != null && users.Length > 0)
                 {
                     @foreach (var user in users)
                     {
                         <option value="@user.Id">@user.Username</option>
                     }
+                }
+                else
+                {
+                    <option value="" disabled>No users available</option>
                 }
             </select>
         </div>
@@ -27,7 +31,7 @@
         
         <div class="ms-2">
             <button id="createPostButton" type="button" class="btn btn-primary" 
-                    @onclick="CreateNewComment" disabled="@(string.IsNullOrEmpty(selectedUserId.ToString()) || selectedUserId == 0)">
+                    @onclick="CreateNewComment" disabled="@(string.IsNullOrEmpty(selectedUserId.ToString()) || selectedUserId == 0 || users == null || users.Length == 0)">
                 Post
             </button>
         </div>
