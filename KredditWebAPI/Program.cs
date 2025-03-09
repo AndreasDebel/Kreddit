@@ -75,7 +75,12 @@ app.MapPost("/posts/{postId}/comments", (DataService service, int postId, Commen
 {
     Comment newComment = service.CreateComment(data.Content, postId, data.UserId);
     return newComment;
+});
 
+app.MapPost("/posts", (DataService service, PostData data) =>
+{
+    Post newPost = service.CreatePost(data.Title, data.Content, data.UserId);
+    return newPost;
 });
 
 app.Run();
@@ -83,6 +88,13 @@ app.Run();
 public class CommentData
 {
     public string? Content { get; set; }
+    public int UserId { get; set; }
+}
+
+public class PostData
+{
+    public string Title { get; set; }
+    public string Content { get; set; }
     public int UserId { get; set; }
 }
 

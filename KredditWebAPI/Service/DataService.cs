@@ -104,8 +104,39 @@ public class DataService
         db.SaveChanges();
 
         return newComment;
+    }
 
+    public Post CreatePost(string title, string content, int userId)
+    {
+        // Find the existing user
+        // First try locating user in Posts
+        User? user = db.Posts.Where(p => p.User.Id == userId)
+                             .Select(p => p.User)
+                             .FirstOrDefault();
 
+        // If not found in posts, try to find in comments
+        if (user == null)
+        {
+            user = db.Posts.SelectMany(p => p.Comments)
+                           .Where(c => c.User.Id == userId)
+                           .Select(c => c.User)
+                           .FirstOrDefault();
+        }
+
+        // Else throw exception
+        if (user == null)
+        {
+            throw new KeyNotFoundException($"User with ID {userId} not found");
+        }
+
+        // Create new post
+        Post newPost = new Post(user, title, content) { CreatedAt = DateTime.Now };
+
+        // Add post to database
+        db.Posts.Add(newPost);
+        db.SaveChanges();
+
+        return newPost;
     }
 
 }
