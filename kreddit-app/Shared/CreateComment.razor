@@ -14,6 +14,11 @@
     // PostId is passed in from the parent component. See how in PostItem.razor.
     [Parameter]
     public int PostId { get; set; }
+
+    // Event callback to notify parent when comment is created
+    [Parameter]
+    public EventCallback OnCommentCreated { get; set; }
+
     private string? content;
     private async void CreateNewComment()
     {
@@ -21,12 +26,12 @@
         {
             return;
         }
-        // TODO: Provide list of users from dropdown, or maybe just convert
-        // from username to UserId
+        // TODO: Provide list of users from dropdown, or maybe just convert from username to UserId
         await apiService.CreateComment(content, PostId, 2); // UserId: 2
 
-        await Task.Delay(1000);
-        // After comment is added:
-        NavigationManager.NavigateTo($"/post/{PostId}", forceLoad: false);
+        content = null;
+
+        // Notify parent component that a comment was created
+        await OnCommentCreated.InvokeAsync();
     }
 }
