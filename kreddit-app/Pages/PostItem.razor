@@ -65,7 +65,15 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        Post = await apiService.GetPost(PostId);
+        try
+        {
+            Post = await apiService.GetPost(PostId);
+            Console.WriteLine($"Loaded post with {Post?.Comments?.Count ?? 0} comments");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading post: {ex.Message}");
+        }
     }
     private async void Upvote(int id)
     {

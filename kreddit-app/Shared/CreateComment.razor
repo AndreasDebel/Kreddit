@@ -49,8 +49,25 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Load users when component initializes
-        users = await apiService.GetUsers();
+        try
+        {
+            // Load users when component initializes
+            users = await apiService.GetUsers();
+            
+            // Debug output
+            Console.WriteLine($"Loaded {users?.Length ?? 0} users for dropdown");
+            if (users != null)
+            {
+                foreach (var user in users)
+                {
+                    Console.WriteLine($"User: {user.Id} - {user.Username}");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading users: {ex.Message}");
+        }
     }
 
     private async Task CreateNewComment()
