@@ -96,7 +96,7 @@ public class DataService
         }
 
         // Create new comment
-        Comment newComment = new Comment(content ?? "", 0, 0, user);
+        Comment newComment = new Comment(content ?? "", 0, 0, user) { CreatedAt = DateTime.Now };
 
         // Add comment to post
         post.Comments.Add(newComment);

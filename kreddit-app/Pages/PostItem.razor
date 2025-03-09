@@ -53,7 +53,10 @@ else
             {
                 <tr>
                     <td>@comment.User.Username</td>
-                    <td>@comment.Content</td>
+                    <td>
+                        <div>@comment.Content</div>
+                        <small class="text-muted">@comment.CreatedAt.ToString("MMM dd, yyyy HH:mm")</small>
+                    </td>
                     <td>@(comment.Upvotes - comment.Downvotes)</td>
                     <td><button @onclick="() => Upvote(comment.Id)">Upvote</button></td>
                     <td><button @onclick="() => Downvote(comment.Id)">Downvote</button></td>
