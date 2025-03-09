@@ -68,4 +68,34 @@ public class ApiService
         // Return the updated post (vote increased)
         return updatedPost;
     }
+
+    public async Task<User[]> GetUsers()
+    {
+        // Extract all users from posts and comments
+        var posts = await GetPosts();
+        
+        // Create a dictionary to store unique users by ID
+        Dictionary<int, User> uniqueUsers = new Dictionary<int, User>();
+        
+        // Add post authors
+        foreach (var post in posts)
+        {
+            if (post.User != null && !uniqueUsers.ContainsKey(post.User.Id))
+            {
+                uniqueUsers[post.User.Id] = post.User;
+            }
+            
+            // Add comment authors
+            foreach (var comment in post.Comments)
+            {
+                if (comment.User != null && !uniqueUsers.ContainsKey(comment.User.Id))
+                {
+                    uniqueUsers[comment.User.Id] = comment.User;
+                }
+            }
+        }
+        
+        // Return as array
+        return uniqueUsers.Values.ToArray();
+    }
 }

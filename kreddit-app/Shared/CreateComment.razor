@@ -1,17 +1,38 @@
 @using kreddit_app.Data;
+@using shared.Model;
 @inject ApiService apiService
 @inject NavigationManager NavigationManager
 
 <div>
     <br/>
     <h3>Write a comment</h3>
-    <input placeholder="Content" type="input" id="content" @bind-value="content"/>
-    <button id="createPostButton" type="button" @onclick="CreateNewComment">Post comment</button>
+    
+    <div class="form-group">
+        <label for="userSelect">Comment as:</label>
+        <select id="userSelect" class="form-control" @bind="selectedUserId">
+            <option value="">-- Select User --</option>
+            @if (users != null)
+            {
+                @foreach (var user in users)
+                {
+                    <option value="@user.Id">@user.Username</option>
+                }
+            }
+        </select>
+    </div>
+    
+    <div class="form-group mt-2">
+        <input placeholder="Content" type="input" id="content" class="form-control" @bind-value="content"/>
+    </div>
+    
+    <button id="createPostButton" type="button" class="btn btn-primary mt-2" 
+            @onclick="CreateNewComment" disabled="@(string.IsNullOrEmpty(selectedUserId.ToString()) || selectedUserId == 0)">
+        Post comment
+    </button>
 </div>
 
 @code {
-
-    // PostId is passed in from the parent component. See how in PostItem.razor.
+    // PostId is passed in from the parent component
     [Parameter]
     public int PostId { get; set; }
 
@@ -20,17 +41,27 @@
     public EventCallback OnCommentCreated { get; set; }
 
     private string? content;
-    private async void CreateNewComment()
+    private int selectedUserId;
+    private User[]? users;
+
+    protected override async Task OnInitializedAsync()
     {
-        if (content == null)
+        // Load users when component initializes
+        users = await apiService.GetUsers();
+    }
+
+    private async Task CreateNewComment()
+    {
+        if (string.IsNullOrEmpty(content) || selectedUserId == 0)
         {
             return;
         }
-        // TODO: Provide list of users from dropdown, or maybe just convert from username to UserId
-        await apiService.CreateComment(content, PostId, 2); // UserId: 2
+        
+        await apiService.CreateComment(content, PostId, selectedUserId);
 
+        // Clear the input field
         content = null;
-
+        
         // Notify parent component that a comment was created
         await OnCommentCreated.InvokeAsync();
     }
