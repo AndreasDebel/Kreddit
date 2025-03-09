@@ -7,28 +7,31 @@
     <br/>
     <h3>Write a comment</h3>
     
-    <div class="form-group">
-        <label for="userSelect">Comment as:</label>
-        <select id="userSelect" class="form-control" @bind="selectedUserId">
-            <option value="">-- Select User --</option>
-            @if (users != null)
-            {
-                @foreach (var user in users)
+    <div class="d-flex align-items-center">
+        <div class="form-group me-2" style="width: 30%;">
+            <select id="userSelect" class="form-control" @bind="selectedUserId">
+                <option value="">Comment as...</option>
+                @if (users != null)
                 {
-                    <option value="@user.Id">@user.Username</option>
+                    @foreach (var user in users)
+                    {
+                        <option value="@user.Id">@user.Username</option>
+                    }
                 }
-            }
-        </select>
+            </select>
+        </div>
+        
+        <div class="form-group" style="width: 60%;">
+            <input placeholder="Write your comment here..." type="input" id="content" class="form-control" @bind-value="content"/>
+        </div>
+        
+        <div class="ms-2">
+            <button id="createPostButton" type="button" class="btn btn-primary" 
+                    @onclick="CreateNewComment" disabled="@(string.IsNullOrEmpty(selectedUserId.ToString()) || selectedUserId == 0)">
+                Post
+            </button>
+        </div>
     </div>
-    
-    <div class="form-group mt-2">
-        <input placeholder="Content" type="input" id="content" class="form-control" @bind-value="content"/>
-    </div>
-    
-    <button id="createPostButton" type="button" class="btn btn-primary mt-2" 
-            @onclick="CreateNewComment" disabled="@(string.IsNullOrEmpty(selectedUserId.ToString()) || selectedUserId == 0)">
-        Post comment
-    </button>
 </div>
 
 @code {
