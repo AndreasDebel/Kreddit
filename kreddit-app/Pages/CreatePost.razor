@@ -21,7 +21,7 @@
                 <label for="postContent">@(postType == "url" ? "URL" : "Content")</label>
                 @if (postType == "url")
                 {
-                    <input class="form-control" placeholder="Enter URL (e.g., https://example.com)" type="url" id="postContent" @bind="postContent"/>
+                    <input class="form-control" placeholder="Enter URL (e.g., google.com or https://example.com)" type="url" id="postContent" @bind="postContent"/>
                 }
                 else
                 {
@@ -78,8 +78,9 @@
         if (string.IsNullOrWhiteSpace(url))
             return false;
             
-        // Simple URL validation using regex
-        string pattern = @"^(http|https)://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?$";
+        // More lenient URL validation
+        // Accepts both full URLs (https://example.com) and domain-only URLs (example.com)
+        string pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
         return Regex.IsMatch(url, pattern);
     }
 
