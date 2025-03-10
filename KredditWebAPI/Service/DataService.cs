@@ -162,4 +162,70 @@ public class DataService
         return post;
     }
 
+    public Post DownvotePost(int id)
+    {
+        // Find the post
+        Post? post = db.Posts
+            .Include(p => p.User)
+            .Include(p => p.Comments)
+                .ThenInclude(c => c.User)
+            .FirstOrDefault(p => p.Id == id);
+
+        if (post == null)
+        {
+            throw new KeyNotFoundException($"Post with ID {id} not found");
+        }
+
+        // Increment upvotes
+        post.Downvotes++;
+
+        // Save changes
+        db.SaveChanges();
+
+        return post;
+    }
+
+    public Comment UpvoteComment(int id)
+    {
+        // Find the post
+        Comment? comment = db.Posts
+            .SelectMany(p => p.Comments)
+            .FirstOrDefault(c => c.Id == id);
+
+
+        if (comment == null)
+        {
+            throw new KeyNotFoundException($"Comment with ID {id} not found");
+        }
+
+        // Increment upvotes
+        comment.Upvotes++;
+
+        // Save changes
+        db.SaveChanges();
+
+        return comment;
+    }
+
+    public Comment DownvoteComment(int id)
+    {
+        // Find the post
+        Comment? comment = db.Posts
+            .SelectMany(p => p.Comments)
+            .FirstOrDefault(c => c.Id == id);
+
+
+        if (comment == null)
+        {
+            throw new KeyNotFoundException($"Comment with ID {id} not found");
+        }
+
+        // Increment upvotes
+        comment.Downvotes++;
+
+        // Save changes
+        db.SaveChanges();
+
+        return comment;
+    }
 }

@@ -24,8 +24,8 @@ else
         {
             <tr>
                 <!-- 
-                    These a href links will match the route in the page 'PostItem.razor'.
-                    The route is defined as "/post/{id}" and the id is the post id.
+                These a href links will match the route in the page 'PostItem.razor'.
+                The route is defined as "/post/{id}" and the id is the post id.
                 -->
                 <td><a href="/post/@post.Id">@post.Title</a></td>
                 <td>@post.Content</td>
@@ -45,6 +45,7 @@ else
 @code {
     private Post[]? posts;
     private Post? votePost;
+    @inject NavigationManager NavMan;
 
     protected override async Task OnInitializedAsync()
     {
@@ -54,10 +55,19 @@ else
     private async void Upvote(int id)
     {
         var updatedPost = await apiService.UpvotePost(id);
+        await RefreshPage();
     }
 
     private async void Downvote(int id)
     {
-        Console.WriteLine("Not implemented 😪");
+        var updatedPost = await apiService.DownvotePost(id);
+        await RefreshPage();
+        // NavMan.NavigateTo("/", true);
+    }
+
+    private async Task RefreshPage()
+    {
+        posts = await apiService.GetPosts();
+        StateHasChanged();
     }
 }

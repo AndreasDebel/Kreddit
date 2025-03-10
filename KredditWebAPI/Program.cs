@@ -89,6 +89,24 @@ app.MapPut("/posts/{id}/upvote", (DataService service, int id) =>
     return updatedPost;
 });
 
+app.MapPut("/posts/{id}/downvote", (DataService service, int id) =>
+{
+    Post updatedPost = service.DownvotePost(id);
+    return updatedPost;
+});
+
+app.MapPut("/comments/{id}/upvote", (DataService service, int id) =>
+{
+    Comment updatedComment = service.UpvoteComment(id);
+    return updatedComment;
+});
+
+app.MapPut("/comments/{id}/downvote", (DataService service, int id) =>
+{
+    Comment updatedComment = service.DownvoteComment(id);
+    return updatedComment;
+});
+
 app.Run();
 
 public class CommentData

@@ -18,9 +18,9 @@ See how the links are made in 'PostList.razor'.
     padding: 10px;
     margin-top: 20px;
     }
-    
+
     .back-button {
-        margin-bottom: 10px;
+    margin-bottom: 10px;
     }
 </style>
 
@@ -77,6 +77,8 @@ else
     public int PostId { get { return int.Parse(Id); } }
     public Post Post { get; set; }
 
+    @inject NavigationManager NavMan;
+
     protected override async Task OnInitializedAsync()
     {
         try
@@ -90,12 +92,28 @@ else
     }
     private async void Upvote(int id)
     {
-        Console.WriteLine("Not implemented 😪");
+        try
+        {
+            await apiService.UpvoteComment(id);
+            await RefreshPost();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error upvoting comment: {ex.Message}");
+        }
     }
 
     private async void Downvote(int id)
     {
-        Console.WriteLine("Not implemented 😪");
+        try
+        {
+            await apiService.DownvoteComment(id);
+            await RefreshPost();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error downvoting comment: {ex.Message}");
+        }
     }
 
     private async Task RefreshPost()
