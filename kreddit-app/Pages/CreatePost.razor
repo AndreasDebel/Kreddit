@@ -21,7 +21,7 @@
                 <label for="postContent">@(postType == "url" ? "URL" : "Content")</label>
                 @if (postType == "url")
                 {
-                    <input class="form-control" placeholder="Enter URL (e.g., google.com or https://example.com)" type="url" id="postContent" @bind="postContent"/>
+                    <input class="form-control" placeholder="Enter a single URL (e.g., google.com)" type="url" id="postContent" @bind="postContent"/>
                 }
                 else
                 {
@@ -78,6 +78,10 @@
         if (string.IsNullOrWhiteSpace(url))
             return false;
             
+        // Check for spaces which would indicate multiple URLs or invalid input
+        if (url.Contains(" "))
+            return false;
+            
         // More lenient URL validation
         // Accepts both full URLs (https://example.com) and domain-only URLs (example.com)
         string pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
@@ -126,11 +130,21 @@
         }
         
         // Validate URL if URL post type is selected
-        if (postType == "url" && !IsValidUrl(postContent))
+        if (postType == "url")
         {
-            errorMessage = "Please enter a valid URL (e.g., https://example.com)";
-            StateHasChanged();
-            return;
+            if (postContent.Contains(" "))
+            {
+                errorMessage = "Please enter only one URL without spaces";
+                StateHasChanged();
+                return;
+            }
+            
+            if (!IsValidUrl(postContent))
+            {
+                errorMessage = "Please enter a valid URL (e.g., google.com)";
+                StateHasChanged();
+                return;
+            }
         }
         
         // Check if text post contains a URL - suggest using URL post type instead
