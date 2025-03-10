@@ -83,6 +83,12 @@ app.MapPost("/posts", (DataService service, PostData data) =>
     return newPost;
 });
 
+app.MapPut("/posts/{id}/upvote", (DataService service, int id) =>
+{
+    Post updatedPost = service.UpvotePost(id);
+    return updatedPost;
+});
+
 app.Run();
 
 public class CommentData

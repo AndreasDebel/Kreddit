@@ -139,4 +139,27 @@ public class DataService
         return newPost;
     }
 
+    public Post UpvotePost(int id)
+    {
+        // Find the post
+        Post? post = db.Posts
+            .Include(p => p.User)
+            .Include(p => p.Comments)
+                .ThenInclude(c => c.User)
+            .FirstOrDefault(p => p.Id == id);
+
+        if (post == null)
+        {
+            throw new KeyNotFoundException($"Post with ID {id} not found");
+        }
+
+        // Increment upvotes
+        post.Upvotes++;
+
+        // Save changes
+        db.SaveChanges();
+
+        return post;
+    }
+
 }
