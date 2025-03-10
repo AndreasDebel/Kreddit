@@ -1,6 +1,7 @@
 @page "/create-post"
 @using kreddit_app.Data;
 @using shared.Model;
+@using System.Text.RegularExpressions;
 @inject ApiService apiService
 
 <div class="mt-4 mb-4 pe-3" style="max-width: 800px;">
@@ -11,9 +12,21 @@
                 <input class="form-control" placeholder="Title" type="input" id="postTitle" @bind="postTitle"/>
             </div>
             
+            <div class="btn-group mb-3 w-100">
+                <button class="btn @(postType == "text" ? "btn-primary" : "btn-outline-primary")" @onclick="() => SetPostType("text")">Text Post</button>
+                <button class="btn @(postType == "url" ? "btn-primary" : "btn-outline-primary")" @onclick="() => SetPostType("url")">URL Post</button>
+            </div>
+            
             <div class="form-group mb-3">
-                <label for="postContent">Content</label>
-                <textarea class="form-control" placeholder="Content" id="postContent" rows="4" @bind="postContent"></textarea>
+                <label for="postContent">@(postType == "url" ? "URL" : "Content")</label>
+                @if (postType == "url")
+                {
+                    <input class="form-control" placeholder="Enter URL (e.g., https://example.com)" type="url" id="postContent" @bind="postContent"/>
+                }
+                else
+                {
+                    <textarea class="form-control" placeholder="Content" id="postContent" rows="4" @bind="postContent"></textarea>
+                }
             </div>
             
             <div class="form-group mb-3">
@@ -49,8 +62,26 @@
     private int selectedUserId = 0;
     private User[]? users;
     private string errorMessage = "";
+    private string postType = "text"; // Default to text post
 
     @inject NavigationManager NavigationManager;
+    
+    private void SetPostType(string type)
+    {
+        postType = type;
+        postContent = ""; // Clear content when switching types
+        errorMessage = "";
+    }
+    
+    private bool IsValidUrl(string url)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+            return false;
+            
+        // Simple URL validation using regex
+        string pattern = @"^(http|https)://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?$";
+        return Regex.IsMatch(url, pattern);
+    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -81,7 +112,7 @@
         
         if (string.IsNullOrWhiteSpace(postContent))
         {
-            errorMessage = "Content is required";
+            errorMessage = postType == "url" ? "URL is required" : "Content is required";
             StateHasChanged();
             return;
         }
@@ -89,6 +120,22 @@
         if (selectedUserId <= 0)
         {
             errorMessage = "Please select a user";
+            StateHasChanged();
+            return;
+        }
+        
+        // Validate URL if URL post type is selected
+        if (postType == "url" && !IsValidUrl(postContent))
+        {
+            errorMessage = "Please enter a valid URL (e.g., https://example.com)";
+            StateHasChanged();
+            return;
+        }
+        
+        // Check if text post contains a URL - suggest using URL post type instead
+        if (postType == "text" && IsValidUrl(postContent))
+        {
+            errorMessage = "Your content appears to be a URL. Please use the URL post type instead.";
             StateHasChanged();
             return;
         }
