@@ -13,8 +13,8 @@
             </div>
             
             <div class="btn-group mb-3 w-100">
-                <button class="btn @(postType == "text" ? "btn-primary" : "btn-outline-primary")" @onclick="() => SetPostType("text")">Text Post</button>
-                <button class="btn @(postType == "url" ? "btn-primary" : "btn-outline-primary")" @onclick="() => SetPostType("url")">URL Post</button>
+                <button class="btn @(postType == "text" ? "btn-primary" : "btn-outline-primary")" @onclick="@(() => SetPostType("text"))">Text Post</button>
+                <button class="btn @(postType == "url" ? "btn-primary" : "btn-outline-primary")" @onclick="@(() => SetPostType("url"))">URL Post</button>
             </div>
             
             <div class="form-group mb-3">
