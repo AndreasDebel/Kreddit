@@ -1,0 +1,1308 @@
+{
+  "posts": [
+    {
+      "title": "The Future of AI in Healthcare",
+      "content": "AI is revolutionizing healthcare with predictive analytics and personalized treatment plans.",
+      "username": "TechDoctor",
+      "upvotes": 87,
+      "downvotes": 12,
+      "daysAgo": 60,
+      "comments": [
+        {
+          "content": "My hospital just implemented an AI diagnostic system and it's been incredibly accurate!",
+          "username": "NursePractitioner",
+          "upvotes": 24,
+          "downvotes": 2
+        },
+        {
+          "content": "I'm concerned about patient privacy with these AI systems. How is data being protected?",
+          "username": "PrivacyAdvocate",
+          "upvotes": 31,
+          "downvotes": 5
+        },
+        {
+          "content": "The cost savings alone make this technology worth implementing.",
+          "username": "HealthcareAdmin",
+          "upvotes": 18,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Best Hiking Trails in the Pacific Northwest",
+      "content": "I've compiled a list of the most scenic hiking trails in Washington and Oregon.",
+      "username": "OutdoorExplorer",
+      "upvotes": 156,
+      "downvotes": 3,
+      "daysAgo": 58,
+      "comments": [
+        {
+          "content": "Olympic National Park has some incredible trails. Highly recommend Hurricane Ridge!",
+          "username": "MountainClimber",
+          "upvotes": 42,
+          "downvotes": 0
+        },
+        {
+          "content": "Don't forget about the Columbia River Gorge trails. Multnomah Falls is a must-see.",
+          "username": "TrailRunner",
+          "upvotes": 35,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Simple Sourdough Recipe for Beginners",
+      "content": "After years of perfecting my technique, here's my foolproof sourdough bread recipe.",
+      "username": "BreadBaker",
+      "upvotes": 203,
+      "downvotes": 8,
+      "daysAgo": 55,
+      "comments": [
+        {
+          "content": "What hydration percentage do you recommend for beginners?",
+          "username": "FlourPower",
+          "upvotes": 15,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Electric Vehicles: Are They Really Better for the Environment?",
+      "content": "A comprehensive analysis of the environmental impact of EVs compared to traditional vehicles.",
+      "username": "GreenTech",
+      "upvotes": 178,
+      "downvotes": 45,
+      "daysAgo": 53,
+      "comments": [
+        {
+          "content": "The mining required for EV batteries is devastating to local ecosystems.",
+          "username": "EnvironmentalScientist",
+          "upvotes": 67,
+          "downvotes": 32
+        },
+        {
+          "content": "We need to consider the source of electricity. If it's coal, EVs aren't as green as advertised.",
+          "username": "EnergyAnalyst",
+          "upvotes": 89,
+          "downvotes": 21
+        },
+        {
+          "content": "Even with these concerns, the long-term benefits outweigh the costs.",
+          "username": "SustainabilityExpert",
+          "upvotes": 54,
+          "downvotes": 18
+        }
+      ]
+    },
+    {
+      "title": "Financial Independence: My 10-Year Journey",
+      "content": "How I went from $50k in debt to financial freedom in a decade.",
+      "username": "FrugalInvestor",
+      "upvotes": 312,
+      "downvotes": 17,
+      "daysAgo": 51,
+      "comments": [
+        {
+          "content": "What investment strategy worked best for you?",
+          "username": "StockTrader",
+          "upvotes": 42,
+          "downvotes": 0
+        },
+        {
+          "content": "Did you use the debt snowball or avalanche method?",
+          "username": "DebtFreeLife",
+          "upvotes": 38,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Homemade Pizza Secrets from an Ex-Pizzeria Chef",
+      "content": "After 15 years making pizzas professionally, here are my tips for restaurant-quality pizza at home.",
+      "username": "PizzaMaster",
+      "upvotes": 276,
+      "downvotes": 5,
+      "daysAgo": 49,
+      "comments": [
+        {
+          "content": "What's your opinion on using a pizza stone versus a steel?",
+          "username": "HomeChef",
+          "upvotes": 31,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Minimalism Changed My Life: Here's How",
+      "content": "My journey to owning less and living more, with practical tips for beginners.",
+      "username": "MinimalistLiving",
+      "upvotes": 189,
+      "downvotes": 23,
+      "daysAgo": 47,
+      "comments": [
+        {
+          "content": "I've been trying to embrace minimalism but struggle with sentimental items. Any advice?",
+          "username": "SentimentalSoul",
+          "upvotes": 45,
+          "downvotes": 2
+        },
+        {
+          "content": "Minimalism isn't just about owning less, it's about intentionality in all aspects of life.",
+          "username": "IntentionalLiving",
+          "upvotes": 67,
+          "downvotes": 3
+        },
+        {
+          "content": "How do you handle gifts from loved ones that don't align with your minimalist values?",
+          "username": "GiftAnxiety",
+          "upvotes": 38,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Learning a New Language at 40+",
+      "content": "It's never too late to become multilingual. Here's my experience learning Japanese at 42.",
+      "username": "LanguageLover",
+      "upvotes": 142,
+      "downvotes": 8,
+      "daysAgo": 45,
+      "comments": [
+        {
+          "content": "What resources did you find most helpful for self-study?",
+          "username": "PolyglotInTraining",
+          "upvotes": 28,
+          "downvotes": 0
+        },
+        {
+          "content": "I started learning Spanish at 50 and it's been incredibly rewarding!",
+          "username": "NeverTooLate",
+          "upvotes": 35,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Urban Gardening in Small Spaces",
+      "content": "How I created a thriving garden on my tiny apartment balcony.",
+      "username": "UrbanGardener",
+      "upvotes": 167,
+      "downvotes": 4,
+      "daysAgo": 43,
+      "comments": [
+        {
+          "content": "What vegetables have you had the most success with in containers?",
+          "username": "ContainerFarmer",
+          "upvotes": 22,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Remote Work: One Year as a Digital Nomad",
+      "content": "The ups and downs of working remotely while traveling the world.",
+      "username": "DigitalNomad",
+      "upvotes": 231,
+      "downvotes": 19,
+      "daysAgo": 41,
+      "comments": [
+        {
+          "content": "How do you handle internet connectivity issues in remote locations?",
+          "username": "RemoteWorker",
+          "upvotes": 42,
+          "downvotes": 0
+        },
+        {
+          "content": "What's your strategy for maintaining work-life balance while traveling?",
+          "username": "WorkLifeBalance",
+          "upvotes": 38,
+          "downvotes": 1
+        },
+        {
+          "content": "Which countries have been most accommodating for digital nomads?",
+          "username": "GlobalCitizen",
+          "upvotes": 45,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Building My Own Tiny House",
+      "content": "A step-by-step account of how I designed and built a 200 sq ft tiny home.",
+      "username": "TinyHouseBuilder",
+      "upvotes": 289,
+      "downvotes": 11,
+      "daysAgo": 39,
+      "comments": [
+        {
+          "content": "What was the total cost breakdown?",
+          "username": "BudgetBuilder",
+          "upvotes": 56,
+          "downvotes": 0
+        },
+        {
+          "content": "How did you handle plumbing and electrical systems?",
+          "username": "DIYEnthusiast",
+          "upvotes": 42,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Meditation Transformed My Mental Health",
+      "content": "How a daily 10-minute meditation practice helped me overcome anxiety and depression.",
+      "username": "MindfulnessJourney",
+      "upvotes": 176,
+      "downvotes": 7,
+      "daysAgo": 37,
+      "comments": [
+        {
+          "content": "What meditation technique worked best for you?",
+          "username": "AnxietyFighter",
+          "upvotes": 34,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Homeschooling During the Pandemic: Lessons Learned",
+      "content": "Our family's experience with homeschooling and what we're continuing even after schools reopened.",
+      "username": "HomeschoolParent",
+      "upvotes": 143,
+      "downvotes": 28,
+      "daysAgo": 35,
+      "comments": [
+        {
+          "content": "How did you maintain socialization for your kids?",
+          "username": "SocialDevelopment",
+          "upvotes": 37,
+          "downvotes": 2
+        },
+        {
+          "content": "What curriculum resources did you find most helpful?",
+          "username": "CurriculumDesigner",
+          "upvotes": 29,
+          "downvotes": 0
+        },
+        {
+          "content": "The flexibility of homeschooling was the biggest benefit for our family too.",
+          "username": "FlexibleLearning",
+          "upvotes": 42,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Zero Waste Living: My First Year",
+      "content": "How I reduced my household waste by 90% and saved money in the process.",
+      "username": "ZeroWasteAdvocate",
+      "upvotes": 198,
+      "downvotes": 12,
+      "daysAgo": 33,
+      "comments": [
+        {
+          "content": "What was the hardest single-use item to eliminate?",
+          "username": "EcoFriendly",
+          "upvotes": 45,
+          "downvotes": 1
+        },
+        {
+          "content": "Do you have recommendations for zero waste bathroom products?",
+          "username": "SustainableLiving",
+          "upvotes": 38,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "I Built a Smart Mirror: Here's How",
+      "content": "A complete DIY guide to building a smart mirror with a Raspberry Pi.",
+      "username": "TechTinkerer",
+      "upvotes": 312,
+      "downvotes": 5,
+      "daysAgo": 31,
+      "comments": [
+        {
+          "content": "What was the total cost of materials?",
+          "username": "BudgetMaker",
+          "upvotes": 47,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Marathon Training for Beginners",
+      "content": "How I went from couch potato to marathon finisher in 12 months.",
+      "username": "RunningEnthusiast",
+      "upvotes": 187,
+      "downvotes": 9,
+      "daysAgo": 29,
+      "comments": [
+        {
+          "content": "How did you prevent injuries during training?",
+          "username": "InjuryProne",
+          "upvotes": 42,
+          "downvotes": 1
+        },
+        {
+          "content": "What was your nutrition strategy during long runs?",
+          "username": "NutritionNerd",
+          "upvotes": 38,
+          "downvotes": 0
+        },
+        {
+          "content": "Did you follow a specific training program?",
+          "username": "TrainingPlan",
+          "upvotes": 29,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Adopting a Rescue Dog: What to Expect",
+      "content": "Our journey adopting a traumatized shelter dog and helping him thrive.",
+      "username": "DogLover",
+      "upvotes": 256,
+      "downvotes": 3,
+      "daysAgo": 27,
+      "comments": [
+        {
+          "content": "Thank you for sharing this. We're considering adoption and this is so helpful.",
+          "username": "FutureDogParent",
+          "upvotes": 45,
+          "downvotes": 0
+        },
+        {
+          "content": "What resources helped most with training?",
+          "username": "DogTrainer",
+          "upvotes": 32,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Fermentation: The Art of Preserving Food",
+      "content": "A beginner's guide to fermenting vegetables, dairy, and more at home.",
+      "username": "FermentationFanatic",
+      "upvotes": 178,
+      "downvotes": 7,
+      "daysAgo": 25,
+      "comments": [
+        {
+          "content": "Have you tried making kombucha? Any tips?",
+          "username": "KombuchaKing",
+          "upvotes": 28,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "My Experience Living Without Social Media for a Year",
+      "content": "How disconnecting from social platforms improved my mental health and relationships.",
+      "username": "DigitalDetox",
+      "upvotes": 342,
+      "downvotes": 21,
+      "daysAgo": 23,
+      "comments": [
+        {
+          "content": "Did you find it difficult to stay in touch with friends?",
+          "username": "SocialButterfly",
+          "upvotes": 56,
+          "downvotes": 2
+        },
+        {
+          "content": "I'm on day 30 of my social media break and already feeling the benefits!",
+          "username": "MindfulTech",
+          "upvotes": 78,
+          "downvotes": 1
+        },
+        {
+          "content": "How did you handle FOMO during your detox?",
+          "username": "FOMOFighter",
+          "upvotes": 45,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Sustainable Fashion: Building a Capsule Wardrobe",
+      "content": "How I created a versatile 30-piece wardrobe that's ethical and sustainable.",
+      "username": "EthicalFashionista",
+      "upvotes": 213,
+      "downvotes": 8,
+      "daysAgo": 21,
+      "comments": [
+        {
+          "content": "What sustainable brands do you recommend that are affordable?",
+          "username": "BudgetFashion",
+          "upvotes": 67,
+          "downvotes": 0
+        },
+        {
+          "content": "How do you handle seasonal changes with a capsule wardrobe?",
+          "username": "SeasonalStyle",
+          "upvotes": 42,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Beekeeping in an Urban Environment",
+      "content": "My experience keeping bees on a city rooftop and harvesting my own honey.",
+      "username": "UrbanBeekeeper",
+      "upvotes": 187,
+      "downvotes": 5,
+      "daysAgo": 19,
+      "comments": [
+        {
+          "content": "How did you handle city regulations and neighbor concerns?",
+          "username": "CityDweller",
+          "upvotes": 34,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Self-Publishing My First Novel",
+      "content": "The complete process of writing, editing, and self-publishing my debut fantasy novel.",
+      "username": "IndieAuthor",
+      "upvotes": 231,
+      "downvotes": 12,
+      "daysAgo": 17,
+      "comments": [
+        {
+          "content": "What platform did you use to publish and why?",
+          "username": "AspiringWriter",
+          "upvotes": 45,
+          "downvotes": 0
+        },
+        {
+          "content": "How did you handle marketing as a self-published author?",
+          "username": "BookMarketer",
+          "upvotes": 56,
+          "downvotes": 1
+        },
+        {
+          "content": "Did you hire a professional editor? Was it worth the cost?",
+          "username": "EditingPro",
+          "upvotes": 38,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Intermittent Fasting: My 6-Month Results",
+      "content": "How 16:8 intermittent fasting changed my health, energy levels, and relationship with food.",
+      "username": "FastingFanatic",
+      "upvotes": 298,
+      "downvotes": 31,
+      "daysAgo": 15,
+      "comments": [
+        {
+          "content": "Did you experience any negative side effects?",
+          "username": "HealthConcerned",
+          "upvotes": 67,
+          "downvotes": 3
+        },
+        {
+          "content": "What eating window worked best for your schedule?",
+          "username": "ScheduleOptimizer",
+          "upvotes": 42,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Building a Passive Income Stream Through Dividend Investing",
+      "content": "How I built a portfolio generating $2000/month in passive dividend income.",
+      "username": "DividendInvestor",
+      "upvotes": 356,
+      "downvotes": 14,
+      "daysAgo": 13,
+      "comments": [
+        {
+          "content": "What's your strategy for selecting dividend stocks?",
+          "username": "StockPicker",
+          "upvotes": 78,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Learning to Code at 50: My Journey to a New Career",
+      "content": "How I switched from retail management to software development in my fifties.",
+      "username": "LateBloomCoder",
+      "upvotes": 412,
+      "downvotes": 7,
+      "daysAgo": 11,
+      "comments": [
+        {
+          "content": "Did you face age discrimination during your job search?",
+          "username": "CareerChanger",
+          "upvotes": 89,
+          "downvotes": 2
+        },
+        {
+          "content": "What resources did you use to learn coding?",
+          "username": "CodeLearner",
+          "upvotes": 67,
+          "downvotes": 0
+        },
+        {
+          "content": "This is so inspiring! I'm 48 and just starting to learn Python.",
+          "username": "NewProgrammer",
+          "upvotes": 103,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Raising Backyard Chickens in the Suburbs",
+      "content": "Everything you need to know about keeping chickens in a suburban setting.",
+      "username": "SuburbanFarmer",
+      "upvotes": 187,
+      "downvotes": 9,
+      "daysAgo": 9,
+      "comments": [
+        {
+          "content": "How do you handle predators in a suburban environment?",
+          "username": "PredatorProtection",
+          "upvotes": 34,
+          "downvotes": 0
+        },
+        {
+          "content": "What chicken breeds do you recommend for beginners?",
+          "username": "ChickenNewbie",
+          "upvotes": 28,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "My Experience with LASIK Eye Surgery",
+      "content": "A detailed account of my LASIK procedure, recovery, and results one year later.",
+      "username": "ClearVision",
+      "upvotes": 231,
+      "downvotes": 5,
+      "daysAgo": 7,
+      "comments": [
+        {
+          "content": "Did you experience any dry eye issues afterward?",
+          "username": "DryEyeSufferer",
+          "upvotes": 45,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Traveling Solo as a Woman: Safety Tips from 30 Countries",
+      "content": "My experiences and advice for women traveling alone internationally.",
+      "username": "SoloFemaleExplorer",
+      "upvotes": 378,
+      "downvotes": 11,
+      "daysAgo": 5,
+      "comments": [
+        {
+          "content": "Which countries did you feel safest in as a solo female traveler?",
+          "username": "SafetyFirst",
+          "upvotes": 89,
+          "downvotes": 1
+        },
+        {
+          "content": "What's in your essential safety kit when traveling?",
+          "username": "PreparedTraveler",
+          "upvotes": 67,
+          "downvotes": 0
+        },
+        {
+          "content": "How do you handle language barriers in remote areas?",
+          "username": "LanguageChallenge",
+          "upvotes": 56,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Making Artisanal Cheese at Home",
+      "content": "A beginner's guide to making simple cheeses with basic kitchen equipment.",
+      "username": "CheeseArtisan",
+      "upvotes": 165,
+      "downvotes": 4,
+      "daysAgo": 3,
+      "comments": [
+        {
+          "content": "What's the easiest cheese for a complete beginner to start with?",
+          "username": "CheeseNewbie",
+          "upvotes": 32,
+          "downvotes": 0
+        },
+        {
+          "content": "Where do you source your milk for the best results?",
+          "username": "DairyFarmer",
+          "upvotes": 28,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "How I Paid Off $100K in Student Loans in 3 Years",
+      "content": "My aggressive debt payoff strategy and the lifestyle changes that made it possible.",
+      "username": "DebtFreeGrad",
+      "upvotes": 423,
+      "downvotes": 17,
+      "daysAgo": 1,
+      "comments": [
+        {
+          "content": "What was your income during this time?",
+          "username": "FinancialReality",
+          "upvotes": 98,
+          "downvotes": 5
+        }
+      ]
+    },
+    {
+      "title": "Woodworking for Beginners: Essential Tools and First Projects",
+      "content": "How to start woodworking with minimal tools and build your first pieces.",
+      "username": "WoodcraftWizard",
+      "upvotes": 276,
+      "downvotes": 3,
+      "daysAgo": 0,
+      "comments": [
+        {
+          "content": "What's a good first project that teaches fundamental skills?",
+          "username": "BeginnerBuilder",
+          "upvotes": 45,
+          "downvotes": 0
+        },
+        {
+          "content": "How much should a beginner expect to spend on basic tools?",
+          "username": "BudgetCrafter",
+          "upvotes": 38,
+          "downvotes": 1
+        },
+        {
+          "content": "Any safety tips for those just starting out?",
+          "username": "SafetyConscious",
+          "upvotes": 67,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "The Psychology of Procrastination",
+      "content": "Understanding why we procrastinate and evidence-based strategies to overcome it.",
+      "username": "ProductivityCoach",
+      "upvotes": 312,
+      "downvotes": 8,
+      "daysAgo": 57,
+      "comments": [
+        {
+          "content": "I've found the Pomodoro Technique incredibly helpful for my procrastination.",
+          "username": "TimerTechnique",
+          "upvotes": 56,
+          "downvotes": 2
+        },
+        {
+          "content": "How do you address the emotional aspects of procrastination?",
+          "username": "EmotionalAwareness",
+          "upvotes": 78,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "My Year of Reading 100 Books",
+      "content": "How I managed to read 100 books in a year while working full-time.",
+      "username": "BookwormExtraordinaire",
+      "upvotes": 245,
+      "downvotes": 12,
+      "daysAgo": 54,
+      "comments": [
+        {
+          "content": "Did you include audiobooks in your count?",
+          "username": "AudiobookFan",
+          "upvotes": 34,
+          "downvotes": 3
+        }
+      ]
+    },
+    {
+      "title": "Foraging for Wild Edibles: A Beginner's Guide",
+      "content": "How to safely identify and harvest edible plants in your local environment.",
+      "username": "WildForager",
+      "upvotes": 187,
+      "downvotes": 5,
+      "daysAgo": 52,
+      "comments": [
+        {
+          "content": "What are some common look-alikes to avoid?",
+          "username": "SafetyFirst",
+          "upvotes": 67,
+          "downvotes": 0
+        },
+        {
+          "content": "Do you recommend any field guides for specific regions?",
+          "username": "NatureGuide",
+          "upvotes": 42,
+          "downvotes": 1
+        },
+        {
+          "content": "What's your favorite wild edible and how do you prepare it?",
+          "username": "WildCook",
+          "upvotes": 38,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Building a Home Recording Studio on a Budget",
+      "content": "How I created a professional-quality recording setup for under $1000.",
+      "username": "HomeRecorder",
+      "upvotes": 231,
+      "downvotes": 7,
+      "daysAgo": 50,
+      "comments": [
+        {
+          "content": "What microphone do you recommend for vocal recording?",
+          "username": "VocalArtist",
+          "upvotes": 45,
+          "downvotes": 0
+        },
+        {
+          "content": "How did you handle room acoustics on a budget?",
+          "username": "AcousticEngineer",
+          "upvotes": 56,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "The Art of Bonsai: Getting Started",
+      "content": "A beginner's guide to creating and caring for bonsai trees.",
+      "username": "BonsaiMaster",
+      "upvotes": 198,
+      "downvotes": 3,
+      "daysAgo": 48,
+      "comments": [
+        {
+          "content": "What species do you recommend for absolute beginners?",
+          "username": "PlantNewbie",
+          "upvotes": 34,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "How I Learned to Play Piano at 35",
+      "content": "My journey learning piano as an adult and tips for other late starters.",
+      "username": "AdultPianist",
+      "upvotes": 267,
+      "downvotes": 9,
+      "daysAgo": 46,
+      "comments": [
+        {
+          "content": "Did you take formal lessons or learn online?",
+          "username": "MusicStudent",
+          "upvotes": 42,
+          "downvotes": 1
+        },
+        {
+          "content": "How much time did you practice daily?",
+          "username": "PracticeMakes",
+          "upvotes": 38,
+          "downvotes": 0
+        },
+        {
+          "content": "I started at 40 and it's been so rewarding! Great to see others on this journey.",
+          "username": "LateBloomMusician",
+          "upvotes": 56,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Ultralight Backpacking: How I Cut My Pack Weight in Half",
+      "content": "Strategies and gear recommendations for lightweight wilderness travel.",
+      "username": "UltralightHiker",
+      "upvotes": 213,
+      "downvotes": 6,
+      "daysAgo": 44,
+      "comments": [
+        {
+          "content": "What's your base weight now?",
+          "username": "BaseWeightObsessed",
+          "upvotes": 28,
+          "downvotes": 0
+        },
+        {
+          "content": "Did you sacrifice any comfort when going ultralight?",
+          "username": "ComfortCamper",
+          "upvotes": 34,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "My Experience with Sensory Deprivation Tanks",
+      "content": "What to expect from your first float therapy session and the benefits I've experienced.",
+      "username": "FloatTherapist",
+      "upvotes": 176,
+      "downvotes": 14,
+      "daysAgo": 42,
+      "comments": [
+        {
+          "content": "Did you experience any hallucinations during your float?",
+          "username": "MindExplorer",
+          "upvotes": 45,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Restoring a 100-Year-Old House: Lessons Learned",
+      "content": "The challenges, surprises, and rewards of renovating a century-old home.",
+      "username": "HistoricHomeowner",
+      "upvotes": 298,
+      "downvotes": 5,
+      "daysAgo": 40,
+      "comments": [
+        {
+          "content": "How did you handle updating the electrical system?",
+          "username": "ElectricalEngineer",
+          "upvotes": 56,
+          "downvotes": 0
+        },
+        {
+          "content": "Did you find any interesting artifacts or hidden features during renovation?",
+          "username": "HistoryBuff",
+          "upvotes": 78,
+          "downvotes": 1
+        },
+        {
+          "content": "What was the biggest unexpected expense?",
+          "username": "BudgetRenovator",
+          "upvotes": 67,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Cold Plunge Therapy: My 30-Day Experiment",
+      "content": "The physical and mental effects of daily cold water immersion.",
+      "username": "ColdPlunger",
+      "upvotes": 231,
+      "downvotes": 18,
+      "daysAgo": 38,
+      "comments": [
+        {
+          "content": "What temperature did you maintain for your cold plunges?",
+          "username": "TemperatureControl",
+          "upvotes": 34,
+          "downvotes": 0
+        },
+        {
+          "content": "Did you notice any improvements in recovery after workouts?",
+          "username": "AthleticRecovery",
+          "upvotes": 42,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Switching to a Four-Day Workweek: Company Results",
+      "content": "How our company implemented a four-day workweek and the impact on productivity and morale.",
+      "username": "WorkLifeInnovator",
+      "upvotes": 387,
+      "downvotes": 21,
+      "daysAgo": 36,
+      "comments": [
+        {
+          "content": "Did you maintain the same total hours or reduce them?",
+          "username": "WorkHoursAnalyst",
+          "upvotes": 89,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Making Authentic Sourdough Bread: A Beginner's Guide",
+      "content": "How to create and maintain a sourdough starter and bake your first loaf.",
+      "username": "SourdoughBaker",
+      "upvotes": 256,
+      "downvotes": 4,
+      "daysAgo": 34,
+      "comments": [
+        {
+          "content": "How do you maintain your starter when not baking regularly?",
+          "username": "StarterKeeper",
+          "upvotes": 45,
+          "downvotes": 0
+        },
+        {
+          "content": "What flour blend do you recommend for beginners?",
+          "username": "FlourPower",
+          "upvotes": 38,
+          "downvotes": 1
+        },
+        {
+          "content": "Any tips for getting a more open crumb structure?",
+          "username": "CrumbConnoisseur",
+          "upvotes": 42,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Raising Monarch Butterflies: From Caterpillar to Migration",
+      "content": "My experience raising and releasing over 100 monarch butterflies.",
+      "username": "ButterflyWhisperer",
+      "upvotes": 213,
+      "downvotes": 3,
+      "daysAgo": 32,
+      "comments": [
+        {
+          "content": "Where do you find monarch eggs and caterpillars?",
+          "username": "NatureFinder",
+          "upvotes": 34,
+          "downvotes": 0
+        },
+        {
+          "content": "How do you protect them from parasites?",
+          "username": "ParasiteProtector",
+          "upvotes": 28,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "My First Year of Beekeeping",
+      "content": "The challenges and rewards of starting a backyard apiary.",
+      "username": "NewBeekeeper",
+      "upvotes": 187,
+      "downvotes": 5,
+      "daysAgo": 30,
+      "comments": [
+        {
+          "content": "How much honey did you harvest in your first year?",
+          "username": "HoneyHarvester",
+          "upvotes": 42,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Living Off-Grid: Our First Year",
+      "content": "The reality of generating our own power, collecting rainwater, and growing our food.",
+      "username": "OffGridLiving",
+      "upvotes": 342,
+      "downvotes": 11,
+      "daysAgo": 28,
+      "comments": [
+        {
+          "content": "What power generation system did you implement?",
+          "username": "SolarPowerFan",
+          "upvotes": 67,
+          "downvotes": 1
+        },
+        {
+          "content": "How do you handle internet connectivity?",
+          "username": "RemoteWorker",
+          "upvotes": 56,
+          "downvotes": 0
+        },
+        {
+          "content": "What was the biggest challenge you didn't anticipate?",
+          "username": "PreparedPrepper",
+          "upvotes": 78,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Mastering the Art of Negotiation: How I Increased My Salary by 40%",
+      "content": "Strategies and scripts I used to successfully negotiate a significant pay increase.",
+      "username": "NegotiationNinja",
+      "upvotes": 412,
+      "downvotes": 19,
+      "daysAgo": 26,
+      "comments": [
+        {
+          "content": "Did you have competing offers or negotiate with just one company?",
+          "username": "CareerStrategist",
+          "upvotes": 89,
+          "downvotes": 2
+        },
+        {
+          "content": "How did you research appropriate salary ranges?",
+          "username": "SalaryResearcher",
+          "upvotes": 67,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Creating a Wildlife-Friendly Garden",
+      "content": "How I transformed my suburban yard into a certified wildlife habitat.",
+      "username": "WildlifeGardener",
+      "upvotes": 198,
+      "downvotes": 4,
+      "daysAgo": 24,
+      "comments": [
+        {
+          "content": "What plants have attracted the most pollinators?",
+          "username": "PollinatorProtector",
+          "upvotes": 45,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Learning to Draw at 40: My Progress After One Year",
+      "content": "How I went from stick figures to realistic portraits with daily practice.",
+      "username": "LateBloomArtist",
+      "upvotes": 267,
+      "downvotes": 7,
+      "daysAgo": 22,
+      "comments": [
+        {
+          "content": "What resources did you use to learn?",
+          "username": "ArtStudent",
+          "upvotes": 56,
+          "downvotes": 1
+        },
+        {
+          "content": "How much time did you practice each day?",
+          "username": "DailyPractice",
+          "upvotes": 42,
+          "downvotes": 0
+        },
+        {
+          "content": "This is so inspiring! I'm 45 and just starting my art journey.",
+          "username": "NewArtist",
+          "upvotes": 78,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Brewing Kombucha at Home: A Complete Guide",
+      "content": "Everything you need to know to brew delicious kombucha at home.",
+      "username": "KombuchaBrewer",
+      "upvotes": 213,
+      "downvotes": 8,
+      "daysAgo": 20,
+      "comments": [
+        {
+          "content": "How do you flavor your second fermentation?",
+          "username": "FlavorExperimenter",
+          "upvotes": 34,
+          "downvotes": 0
+        },
+        {
+          "content": "Where did you source your first SCOBY?",
+          "username": "ScobyShopper",
+          "upvotes": 28,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "My Journey to Financial Independence at 35",
+      "content": "How I achieved financial independence and early retirement through aggressive saving and investing.",
+      "username": "FIREAchiever",
+      "upvotes": 378,
+      "downvotes": 23,
+      "daysAgo": 18,
+      "comments": [
+        {
+          "content": "What was your savings rate during your accumulation phase?",
+          "username": "SavingsRate",
+          "upvotes": 67,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Overcoming Social Anxiety: Techniques That Worked for Me",
+      "content": "How I went from avoiding social situations to confidently public speaking.",
+      "username": "AnxietyOvercomer",
+      "upvotes": 312,
+      "downvotes": 5,
+      "daysAgo": 16,
+      "comments": [
+        {
+          "content": "Did medication play a role in your recovery?",
+          "username": "MentalHealthAdvocate",
+          "upvotes": 56,
+          "downvotes": 3
+        },
+        {
+          "content": "What exposure exercises were most helpful?",
+          "username": "ExposureTherapy",
+          "upvotes": 78,
+          "downvotes": 1
+        },
+        {
+          "content": "How long did it take before you noticed significant improvement?",
+          "username": "RecoveryJourney",
+          "upvotes": 67,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Building a Custom Mechanical Keyboard",
+      "content": "A step-by-step guide to designing and building your own mechanical keyboard.",
+      "username": "KeyboardEnthusiast",
+      "upvotes": 245,
+      "downvotes": 4,
+      "daysAgo": 14,
+      "comments": [
+        {
+          "content": "What switches do you recommend for a quiet office environment?",
+          "username": "QuietTypist",
+          "upvotes": 42,
+          "downvotes": 0
+        },
+        {
+          "content": "Where did you source your keycaps?",
+          "username": "KeycapCollector",
+          "upvotes": 38,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Hiking the Entire Appalachian Trail: Lessons from 2,190 Miles",
+      "content": "My six-month journey hiking from Georgia to Maine and what I learned along the way.",
+      "username": "ThroughHiker",
+      "upvotes": 387,
+      "downvotes": 6,
+      "daysAgo": 12,
+      "comments": [
+        {
+          "content": "What was your daily mileage?",
+          "username": "MileCounter",
+          "upvotes": 45,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "Making Authentic Neapolitan Pizza at Home",
+      "content": "How to achieve restaurant-quality Neapolitan pizza with a home oven.",
+      "username": "PizzaPerfectionist",
+      "upvotes": 276,
+      "downvotes": 7,
+      "daysAgo": 10,
+      "comments": [
+        {
+          "content": "What flour do you recommend for authentic Neapolitan dough?",
+          "username": "FlourFanatic",
+          "upvotes": 56,
+          "downvotes": 1
+        },
+        {
+          "content": "How do you get your home oven hot enough?",
+          "username": "OvenOptimizer",
+          "upvotes": 67,
+          "downvotes": 0
+        },
+        {
+          "content": "What's your hydration percentage for the dough?",
+          "username": "DoughDeveloper",
+          "upvotes": 42,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Quitting Sugar for 30 Days: My Experience",
+      "content": "The physical and mental effects of eliminating added sugar from my diet for a month.",
+      "username": "SugarFree",
+      "upvotes": 342,
+      "downvotes": 19,
+      "daysAgo": 8,
+      "comments": [
+        {
+          "content": "Did you experience withdrawal symptoms?",
+          "username": "WithdrawalWatcher",
+          "upvotes": 78,
+          "downvotes": 2
+        },
+        {
+          "content": "What foods surprised you by containing added sugar?",
+          "username": "LabelReader",
+          "upvotes": 89,
+          "downvotes": 1
+        }
+      ]
+    },
+    {
+      "title": "Building a Custom Gaming PC: Parts List and Assembly Guide",
+      "content": "How I built a high-performance gaming PC for under $1500.",
+      "username": "PCBuilder",
+      "upvotes": 298,
+      "downvotes": 8,
+      "daysAgo": 6,
+      "comments": [
+        {
+          "content": "What GPU did you choose and why?",
+          "username": "GraphicsGuru",
+          "upvotes": 67,
+          "downvotes": 0
+        }
+      ]
+    },
+    {
+      "title": "My Experience Teaching English Abroad for a Year",
+      "content": "What it's really like to teach English in South Korea as a foreigner.",
+      "username": "GlobalTeacher",
+      "upvotes": 231,
+      "downvotes": 5,
+      "daysAgo": 4,
+      "comments": [
+        {
+          "content": "What qualifications did you need?",
+          "username": "CertificationSeeker",
+          "upvotes": 45,
+          "downvotes": 0
+        },
+        {
+          "content": "How did you handle the language barrier in daily life?",
+          "username": "LanguageLearner",
+          "upvotes": 38,
+          "downvotes": 1
+        },
+        {
+          "content": "What was the biggest cultural adjustment?",
+          "username": "CultureShock",
+          "upvotes": 56,
+          "downvotes": 2
+        }
+      ]
+    },
+    {
+      "title": "Starting a Successful Etsy Shop: First Year Results",
+      "content": "How I built a profitable handmade jewelry business on Etsy.",
+      "username": "EtsyEntrepreneur",
+      "upvotes": 267,
+      "downvotes": 6,
+      "daysAgo": 2,
+      "comments": [
+        {
+          "content": "How did you handle product photography?",
+          "username": "ProductPhotographer",
+          "upvotes": 42,
+          "downvotes": 0
+        },
+        {
+          "content": "What's your strategy for SEO and getting found in searches?",
+          "username": "SEOStrategist",
+          "upvotes": 56,
+          "downvotes": 1
+        }
+      ]
+    }
+  ]
+}
