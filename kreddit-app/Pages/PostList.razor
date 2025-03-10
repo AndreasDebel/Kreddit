@@ -61,7 +61,9 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        posts = await apiService.GetPosts();
+        var allPosts = await apiService.GetPosts();
+        // Sort posts by creation date (newest first) and take only the 50 newest
+        posts = allPosts.OrderByDescending(p => p.CreatedAt).Take(50).ToArray();
     }
 
     private async void Upvote(int id)
@@ -79,7 +81,9 @@ else
 
     private async Task RefreshPage()
     {
-        posts = await apiService.GetPosts();
+        var allPosts = await apiService.GetPosts();
+        // Sort posts by creation date (newest first) and take only the 50 newest
+        posts = allPosts.OrderByDescending(p => p.CreatedAt).Take(50).ToArray();
         StateHasChanged();
     }
     
