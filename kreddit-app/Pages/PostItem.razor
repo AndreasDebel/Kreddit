@@ -6,6 +6,7 @@ See how the links are made in 'PostList.razor'.
 
 @using kreddit_app.Data;
 @using shared.Model;
+@using System.Text.RegularExpressions;
 @inject ApiService apiService
 
 <PageTitle>Kreddit</PageTitle>
@@ -38,7 +39,18 @@ else
         <h4>@Post.Title</h4>
         <p><strong>User: @Post.User.Username, Votes: @(Post.Upvotes - Post.Downvotes)</strong></p>
         <p><small>Posted on: @Post.CreatedAt.ToString("MMM dd, yyyy HH:mm")</small></p>
-        <p>@Post.Content</p>
+        @if (IsUrl(Post.Content))
+        {
+            <p>
+                <a href="@EnsureHttpPrefix(Post.Content)" target="_blank" rel="noopener noreferrer">
+                    @Post.Content
+                </a>
+            </p>
+        }
+        else
+        {
+            <p>@Post.Content</p>
+        }
     </div>
 
     <div class="contents">
@@ -120,5 +132,25 @@ else
     {
         Post = await apiService.GetPost(PostId);
         StateHasChanged();
+    }
+
+    private bool IsUrl(string text)
+    {
+        if (string.IsNullOrWhiteSpace(text))
+            return false;
+            
+        // Check if the text is a URL (similar to the validation in CreatePost.razor)
+        string pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
+        return Regex.IsMatch(text, pattern);
+    }
+
+    private string EnsureHttpPrefix(string url)
+    {
+        // Make sure the URL has http:// or https:// prefix
+        if (!url.StartsWith("http://") && !url.StartsWith("https://"))
+        {
+            return "https://" + url;
+        }
+        return url;
     }
 }
