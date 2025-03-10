@@ -2,6 +2,7 @@
 
 @using kreddit_app.Data;
 @using shared.Model;
+@using System.Text.RegularExpressions;
 @inject ApiService apiService
 
 @using Microsoft.Extensions.Configuration
@@ -28,7 +29,18 @@ else
                 The route is defined as "/post/{id}" and the id is the post id.
                 -->
                 <td><a href="/post/@post.Id">@post.Title</a></td>
-                <td>@post.Content</td>
+                <td>
+                    @if (IsUrl(post.Content))
+                    {
+                        <a href="@EnsureHttpPrefix(post.Content)" target="_blank" rel="noopener noreferrer">
+                            @post.Content
+                        </a>
+                    }
+                    else
+                    {
+                        @post.Content
+                    }
+                </td>
                 <td>@post.CreatedAt.ToString("MMM dd")</td>
                 <td>@(post.Upvotes - post.Downvotes)</td>
                 <td><button @onclick="() => Upvote(post.Id)">Upvote</button></td>
@@ -69,5 +81,25 @@ else
     {
         posts = await apiService.GetPosts();
         StateHasChanged();
+    }
+    
+    private bool IsUrl(string text)
+    {
+        if (string.IsNullOrWhiteSpace(text))
+            return false;
+            
+        // Check if the text is a URL
+        string pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
+        return Regex.IsMatch(text, pattern);
+    }
+
+    private string EnsureHttpPrefix(string url)
+    {
+        // Make sure the URL has http:// or https:// prefix
+        if (!url.StartsWith("http://") && !url.StartsWith("https://"))
+        {
+            return "https://" + url;
+        }
+        return url;
     }
 }
